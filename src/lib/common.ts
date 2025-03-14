@@ -1,4 +1,5 @@
 import { currentView } from "./store";
 
-export const navigate = (page: "start" | "fatcalc") =>
-  currentView.update((_) => page);
+export const navigate = (
+  page: "start" | "armyfatcalc" | "navyfatcalc" | "onerepmax",
+) => currentView.update((_) => page);

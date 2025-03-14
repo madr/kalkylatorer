@@ -43,7 +43,7 @@
         <span>
             <button onclick={() => navigate("start")}>Tillbaka</button>
         </span>
-        <h1>Kroppsfettkalkylator</h1>
+        <h1>Kroppsfettkalkylator, Army</h1>
     </header>
     <output>
         {#if fatPercentage > 0}
@@ -123,68 +123,8 @@
 </main>
 
 <style>
-    main {
-        min-width: 100vw;
-        min-height: 100vh;
-        display: grid;
-        gap: 1em;
-        padding: 1em;
-        box-sizing: border-box;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(7, 1fr);
-    }
-
-    output {
-        background: rgba(0, 0, 0, 0.25);
-        display: grid;
-        grid-column: 1 / 4;
-        grid-row: 2 / 4;
-        grid-template-columns: subgrid;
-        font-size: 2em;
-
-        > span {
-            grid-column: 1 / 6;
-            grid-row: 1 / 2;
-            text-align: right;
-
-            &::before {
-                content: "=";
-                color: #888;
-            }
-
-            &::after {
-                content: "%";
-                color: #888;
-            }
-        }
-    }
-
-    form {
-        background: rgba(255, 255, 255, 0.25);
-        display: grid;
-        grid-column: 1 / 4;
-        grid-row: 4 / 8;
-        grid-template-columns: subgrid;
-    }
-
     .gender {
         grid-column: 1 / 2;
         grid-row: 1 / 4;
-    }
-
-    input {
-        max-width: 4em;
-        display: block;
-    }
-
-    header {
-        display: grid;
-        grid-column: 1 / 4;
-        grid-row: 1 / 1;
-        grid-template-columns: subgrid;
-    }
-
-    h1 {
-        grid-column: 2 / 4;
     }
 </style>

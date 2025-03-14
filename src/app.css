@@ -17,6 +17,19 @@ body {
     margin: 0;
 }
 
+button {
+    border: 5px solid crimson;
+    background-color: transparent;
+    border-radius: 0;
+    color: inherit;
+
+    &:hover,
+    &:focus {
+        border-color: #fff;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
 header {
     background-color: crimson;
 }
@@ -26,4 +39,65 @@ h2,
 h2 {
     font-size: 1em;
     margin: 0;
+    text-wrap: balance;
+}
+
+main {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    gap: 1em;
+    padding: 1em;
+    box-sizing: border-box;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+}
+
+output {
+    background: rgba(0, 0, 0, 0.25);
+    display: grid;
+    grid-column: 1 / 4;
+    grid-row: 2 / 4;
+    grid-template: subgrid / subgrid;
+    font-size: 2em;
+
+    > span {
+        grid-column: 1 / 6;
+        grid-row: 1 / 2;
+        text-align: right;
+
+        &::before {
+            content: "=";
+            color: #888;
+        }
+
+        &::after {
+            content: "%";
+            color: #888;
+        }
+    }
+}
+
+form {
+    background: rgba(255, 255, 255, 0.25);
+    display: grid;
+    grid-column: 1 / 4;
+    grid-row: 4 / 8;
+    grid-template: subgrid / subgrid;
+}
+
+input {
+    max-width: 4em;
+    display: block;
+}
+
+header {
+    display: grid;
+    grid-column: 1 / 4;
+    grid-row: 1 / 1;
+    grid-template: subgrid / subgrid;
+}
+
+h1 {
+    grid-column: 2 / 4;
 }
